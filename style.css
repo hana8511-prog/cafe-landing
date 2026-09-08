@@ -1,0 +1,146 @@
+:root {
+  --bg: #faf6f0;
+  --bg-alt: #f0e6d8;
+  --ink: #2e2620;
+  --muted: #6f6357;
+  --accent: #8a5a35;
+  --card: #ffffff;
+  --border: #e2d5c3;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+.container {
+  width: min(960px, 90vw);
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 246, 240, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav nav a {
+  margin-left: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero {
+  padding: 96px 0;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary { background: var(--accent); color: #fff; }
+
+.btn-ghost { border: 1px solid var(--accent); color: var(--accent); }
+
+/* Sections */
+.section { padding: 72px 0; }
+
+.section-alt { background: var(--bg-alt); }
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.card h3 { margin-bottom: 8px; font-size: 1.15rem; }
+
+.card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
+
+.price { font-weight: 700; color: var(--accent); }
+
+.about p { color: var(--muted); max-width: 640px; }
+
+.visit ul { list-style: none; }
+
+.visit li { padding: 8px 0; border-bottom: 1px dashed var(--border); }
+
+.visit li strong { display: inline-block; width: 96px; color: var(--ink); }
+
+/* Footer */
+.site-footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
