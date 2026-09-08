@@ -131,6 +131,26 @@ body {
 
 .about p { color: var(--muted); max-width: 640px; }
 
+/* Diagram sections */
+.section-lead {
+  color: var(--muted);
+  max-width: 560px;
+  margin: -16px 0 28px;
+}
+
+.diagram {
+  margin: 0;
+  padding: 8px 0 4px;
+  overflow-x: auto;
+}
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+}
+
 .visit ul { list-style: none; }
 
 .visit li { padding: 8px 0; border-bottom: 1px dashed var(--border); }
